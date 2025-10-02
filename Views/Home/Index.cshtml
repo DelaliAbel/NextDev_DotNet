@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content">
+        <p class="hero-subtitle">Apprendre, Pratiquer et Exceller</p>
+
+        <!-- titre responsive : braces violettes, DevCourse blanc -->
+        <h1 class="hero-title">
+            <span class="title-wrap">
+                <span class="braces">{</span>
+                <span class="brand">MSA - NextDev .NET</span>
+                <span class="braces">}</span>
+            </span>
+        </h1>
+
+        <p class="hero-desc">Be a force for Good</p>
+
+        <a class="btn btn-primary" asp-controller="Team" asp-action="index">Notre équipe</a>
+
+        <div class="hero-stats mt-5" aria-hidden="false">
+            <div class="stat">
+                <span class="icon"><i class="fas fa-video"></i></span>
+                <strong>Microsoft Learn</strong>
+                <small>Ressources</small>
+            </div>
+
+            <div class="stat">
+                <span class="icon"><i class="fas fa-clock"></i></span>
+                <strong>3 mois</strong>
+                <small>Formation</small>
+            </div>
+
+            <div class="stat">
+                <span class="icon"><i class="fas fa-unlock"></i></span>
+                <strong>Illimité</strong>
+                <small>Access</small>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- LEARNING -->
+<section class="learn-section">
+    <div class="container">
+        <h2>Le programme d'apprentissage - NextDev</h2>
+        <p class="lead">
+            Your course overview goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae posuere nibh, at posuere enim. Sed vulputate ante congue, euismod odio a, gravida neque. Maecenas volutpat risus dolor.
+        </p>
+
+        <div class="learn-list">
+            <div class="row learn-grid">
+                <div class="col-md-6">
+                    <div class="learn-item"><i class="fas fa-check-circle"></i><div>Microsoft Learn - .NET principes et bonnes pratiques.</div></div>
+                    <div class="learn-item"><i class="fas fa-check-circle"></i><div>Approche pratique : ASP.NET Core, Blazor et MAUI</div></div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="learn-item"><i class="fas fa-check-circle"></i><div>APIs & sécurité : conception et consommation d'APIs.</div></div>
+                    <div class="learn-item"><i class="fas fa-check-circle"></i><div>Déploiement réel : livraison d'une application web et mobile.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

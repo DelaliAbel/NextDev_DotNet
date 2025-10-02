@@ -1,0 +1,27 @@
+﻿@{
+    @model TeamMember;
+}
+<section class="profile-section">
+    <!-- IMAGE -->
+    <div class="profile-image">
+        <img src="@Model.MemberImage">
+    </div>
+
+    <!-- INFO -->
+    <div class="profile-info">
+        <h1>Salut, Je suis @Model.MemberFullName.</h1>
+        <h2>@Model.MemberTitle</h2>
+        <p>
+            @Model.MemberDescription
+        </p>
+
+        <ul>
+            <li><i class="fas fa-phone"></i> Phone: <a href="tel:@Model.MemberPhone">@Model.MemberPhone</a></li>
+            <li><i class="fas fa-envelope"></i> Email: <a href="@Model.MemberEmail">@Model.MemberEmail</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> @Model.MemberAddress</li>
+        </ul>
+
+        <a class="btn-back text-center" asp-controller="Team" asp-action="index">RETOUR</a>
+    </div>
+</section>
+

@@ -1,0 +1,32 @@
+﻿@{
+@model IEnumerable<TeamMember>;
+}
+
+<div class="team-page">
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="mb-3">Our Team</h2>
+            <p class="mb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident</p>
+
+            <div class="row justify-content-center g-5">
+                <!-- Member 1 -->
+                @foreach(var member in @Model)
+                {
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <div class="team-member">
+                            <img src="@member.MemberImage">
+                            <div class="team-info">
+                                <a asp-controller="Team" asp-action="Detail" asp-route-id="@member.MemberID">
+                                    <h5>@member.MemberFullName</h5>
+                                </a>
+                                <small>@member.MemberTitle</small>
+                                <p>@member.MemberDescription</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</div>
