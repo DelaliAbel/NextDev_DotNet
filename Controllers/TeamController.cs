@@ -20,7 +20,7 @@ namespace NextDev_DotNet.Controllers
                     MemberPhone = "+227 00 00 00 00",
                     MemberEmail = "info@jeffreybrown.com",
                     MemberAddress = "Boukoki - Niamey, Niger",
-                    MemberImage = "images/img_1.png"
+                    MemberImage = "/images/img_1.png"
                 },
                 new TeamMember
                 {
@@ -29,8 +29,9 @@ namespace NextDev_DotNet.Controllers
                     MemberTitle = "Senior Developer",
                     MemberDescription = "Adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                     MemberPhone = "555-5678",
-                    MemberEmail = "Soni - Niamey, Niger",
-                    MemberImage = "images/img_2.png"
+                    MemberEmail = "info@alexgreenfield.com",
+                    MemberAddress = "Soni - Niamey, Niger",
+                    MemberImage = "/images/img_2.png"
                 },
                 new TeamMember
                 {
@@ -39,8 +40,9 @@ namespace NextDev_DotNet.Controllers
                     MemberTitle = "UX Designer",
                     MemberDescription = "Adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                     MemberPhone = "555-8765",
-                    MemberEmail = "Kalley-Est - Niamey, Niger",
-                    MemberImage = "images/img_3.png"
+                    MemberEmail = "info@lindalarson.com",
+                    MemberAddress = "Kalley-Est - Niamey, Niger",
+                    MemberImage = "/images/img_3.png"
 
                 },
                 new TeamMember
@@ -50,8 +52,9 @@ namespace NextDev_DotNet.Controllers
                     MemberTitle = "QA Engineer",
                     MemberDescription = "Adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                     MemberPhone = "555-4321",
-                    MemberEmail = "Lazaré - Niamey, Niger",
-                    MemberImage = "images/img_4.png"
+                    MemberEmail = "inf@annrichmond",
+                    MemberAddress = "Lazaré - Niamey, Niger",
+                    MemberImage = "/images/img_4.png"
                 }
             };
         }
