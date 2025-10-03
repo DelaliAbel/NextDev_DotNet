@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <title>NextDev .Net</title>
 
     <!-- Bootstrap CSS -->
@@ -13,15 +13,32 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" asp-controller="home" asp-action="index">logo</a>
-            <a class="navbar-nav" asp-controller="team" asp-action="index">Team</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <!-- Logo -->
+            <a class="navbar-brand" asp-controller="home" asp-action="index">Logo</a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-5">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="home" asp-action="index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="team" asp-action="index">Team</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
+
 
     <div>
         <main role="main" class="pb-3">
@@ -35,6 +52,9 @@
         </div>
     </footer>
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

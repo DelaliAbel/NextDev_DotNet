@@ -1,7 +1,10 @@
-﻿namespace NextDev_DotNet.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NextDev_DotNet.Models
 {
     public class TeamMember
     {
+        [Key]
         public int MemberID { get; set; }
         public string MemberFullName { get; set; }
         public string MemberTitle { get; set; }
