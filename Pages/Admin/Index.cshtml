@@ -1,0 +1,73 @@
+﻿@page
+@model NextDev_DotNet.Pages.Admin.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="m-5">
+    <h1>Index</h1>
+
+    <p>
+        <a asp-page="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamMember[0].MemberFullName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamMember[0].MemberTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamMember[0].MemberDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamMember[0].MemberPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamMember[0].MemberEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamMember[0].MemberAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamMember[0].MemberImage)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model.TeamMember) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberFullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberImage)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.MemberID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.MemberID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.MemberID">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+</table>
+</div>

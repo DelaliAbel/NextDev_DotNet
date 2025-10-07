@@ -36,6 +36,14 @@
                     </li>
                 </ul>
             </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <ul class="navbar-nav ms-5">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="LogOut">Se déconnecter</a>
+                    </li>
+                </ul>
+            }
         </div>
     </nav>
 

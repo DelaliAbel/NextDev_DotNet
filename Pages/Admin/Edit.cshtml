@@ -1,0 +1,73 @@
+﻿@page
+@model NextDev_DotNet.Pages.Admin.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="m-5">
+
+    <h1>Edit</h1>
+
+    <h4>TeamMember</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="TeamMember.MemberID" />
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberFullName" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberFullName" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberFullName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberTitle" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberTitle" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberDescription" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberDescription" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberDescription" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberPhone" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberPhone" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberPhone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberEmail" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberEmail" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberEmail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberAddress" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberAddress" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberAddress" class="text-danger"></span>
+                </div>
+                <!-- Affichage de l'image actuelle si elle existe -->
+                @if (!string.IsNullOrEmpty(Model.TeamMember.MemberImage))
+                {
+                    <div class="form-group">
+                        <label>Image actuelle :</label><br />
+                        <img src="@Model.TeamMember.MemberImage" alt="Image actuelle" style="max-width:200px;max-height:200px;" />
+                    </div>
+                }
+                <div class="form-group">
+                    <label asp-for="ImageFile" class="control-label"></label>
+                    <input asp-for="ImageFile" type="file" class="form-control" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-page="./Index">Back to List</a>
+    </div>
+</div>
+

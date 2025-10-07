@@ -1,0 +1,66 @@
+﻿@page
+@model NextDev_DotNet.Pages.Admin.CreateModel
+
+@{
+    ViewData["Title"] = "Create Team Member";
+}
+<div class="m-5">
+
+    <h1>Create Team Member</h1>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberFullName" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberFullName" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberFullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberTitle" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberTitle" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberTitle" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberDescription" class="control-label"></label>
+                    <textarea asp-for="TeamMember.MemberDescription" class="form-control"></textarea>
+                    <span asp-validation-for="TeamMember.MemberDescription" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberPhone" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberPhone" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberPhone" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberEmail" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberEmail" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberEmail" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TeamMember.MemberAddress" class="control-label"></label>
+                    <input asp-for="TeamMember.MemberAddress" class="form-control" />
+                    <span asp-validation-for="TeamMember.MemberAddress" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ImageFile" class="control-label"></label>
+                    <input asp-for="ImageFile" type="file" class="form-control" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <a asp-page="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

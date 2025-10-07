@@ -1,0 +1,63 @@
+﻿@page
+@model NextDev_DotNet.Pages.Admin.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="m-5">
+    <h1>Details</h1>
+
+    <div>
+        <h4>TeamMember</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TeamMember.MemberFullName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TeamMember.MemberFullName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TeamMember.MemberTitle)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TeamMember.MemberTitle)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TeamMember.MemberDescription)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TeamMember.MemberDescription)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TeamMember.MemberPhone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TeamMember.MemberPhone)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TeamMember.MemberEmail)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TeamMember.MemberEmail)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TeamMember.MemberAddress)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TeamMember.MemberAddress)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TeamMember.MemberImage)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TeamMember.MemberImage)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-page="./Edit" asp-route-id="@Model.TeamMember.MemberID">Edit</a> |
+        <a asp-page="./Index">Back to List</a>
+    </div>
+</div>
